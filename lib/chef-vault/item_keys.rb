@@ -93,7 +93,7 @@ class ChefVault
 
     def delete(chef_key)
       @cache[chef_key.name] = false
-      @tmpcache.delete(key)
+      @tmpcache = {}
       raw_data[chef_key.type].delete(chef_key.name)
       raw_data.delete(chef_key.name)
     end
